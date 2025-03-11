@@ -17,7 +17,7 @@ class ArrOperation {
 
         // Exception handling
         if (arr.length == 0) {
-            throw new AssertionError();
+            throw new AssertionError("Input array is null");
         }
         int maxLength1 = 0;
 
@@ -68,7 +68,7 @@ class ArrOperation {
 
         // Exception handling
         if (arr.length == 0) {
-            throw new AssertionError();
+            throw new AssertionError("input array length is null");
         }
         int count = 1, ans = 0;
 
@@ -96,13 +96,17 @@ class ArrOperation {
         // Exception handling
         int xCount = 0, yCount = 0;
 
-        if (arr.length == 0 || arr[arr.length - 1] == X) {
-            throw new AssertionError();
+        if (arr.length == 0) {
+            throw new AssertionError("Input array is null");
+        }
+
+        if(arr[arr.length - 1] == X) {
+            throw new AssertionError("last element should not be X");
         }
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i - 1] == X && arr[i] == X) {
-                throw new AssertionError();
+                throw new AssertionError("the two X can't be adjacent");
             }
         }
 
@@ -115,7 +119,7 @@ class ArrOperation {
         }
 
         if (xCount != yCount) {
-            throw new AssertionError();
+            throw new AssertionError("count of X and Y is not same");
         }
 
         Queue<Integer> q = new LinkedList<>();
@@ -147,7 +151,7 @@ class ArrOperation {
 
         // Exception handling
         if (arr.length == 0) {
-            throw new AssertionError();
+            throw new AssertionError("Input array is null");
         }
         int sum = 0, ans = 0;
 
@@ -277,3 +281,5 @@ class ArrOperation {
         sc.close();
     }
 }
+
+
